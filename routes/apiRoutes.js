@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 // npm package for uniq id's
-const uniqId = require('uniqId');
-const {application} = require('express');
+var uniqId = require('uniqId');
+//const {application} = require('express');
 
 // route
 // Get /api/notes reads db.json and returns saved notes as Json

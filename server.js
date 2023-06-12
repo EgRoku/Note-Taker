@@ -5,7 +5,7 @@ const express = require('express');
 const application = express();
 
 // creates enviornment variable port
-const port = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 
 
@@ -24,6 +24,6 @@ require('./routes/htmlRoutes')(application);
 
 
 // application listener - starts the server at the 3001 port
-application.listen(port, () => {
-    console.log(`Server available at localhost${port}`);
+application.listen(PORT, () => {
+    console.log(`Server available at localhost${PORT}`);
 });

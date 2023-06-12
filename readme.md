@@ -30,11 +30,13 @@ Note Taker is an application that can be used to write and save notes. This appl
 
 First Clone project from GitHub.
 
-Run the following line of code in your terminal of choice to install all the needed packages: 
+Run the following lines of code in your terminal of choice to install all the needed packages: 
 ```
 npm i
 ```
-
+```
+npm install uniqid
+```
 
 ## Usage
 
