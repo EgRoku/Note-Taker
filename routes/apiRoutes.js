@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 // npm package for uniq id's
-var uniqId = require('uniqId');
+var uniqid = require('uniqid');
 //const {application} = require('express');
 
 // route
@@ -22,7 +22,7 @@ module.exports = (application) => {
         let userNote = {
             title: req.body.title,
             text: req.body.text,
-            id: uniqId(),
+            id: uniqid(),
         };
         // push created note to db.json
         db.push(userNote);
@@ -30,9 +30,9 @@ module.exports = (application) => {
         res.json(db);
     });
 
-    // Delete /api/notes:id receives query param with uniqId for a note to delete
+    // Delete /api/notes:id receives query param with uniqid for a note to delete
     application.delete('api/notes/:id', (req, res) => {
-        // Reads notes from db.json and removes them using uniqId
+        // Reads notes from db.json and removes them using uniqid
         let db = JSON.parse(fs.readFileSync('db/db.json'))
         let deleteNotes = db.filter(item => item.id !== req.params.id);
         // Rewrites notes to db.json
