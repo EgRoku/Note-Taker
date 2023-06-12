@@ -34,9 +34,9 @@ module.exports = (application) => {
     application.delete('api/notes/:id', (req, res) => {
         // Reads notes from db.json and removes them using uniqId
         let db = JSON.parse(fs.readFileSync('db/db.json'))
-        let deleteNote = db.filter(item => item.id !== req.params.id);
+        let deleteNotes = db.filter(item => item.id !== req.params.id);
         // Rewrites notes to db.json
-        fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
-        res.json(deleteNote);
+        fs.writeFileSync('db/db.json', JSON.stringify(deleteNotes));
+        res.json(deleteNotes);
     })
 };
