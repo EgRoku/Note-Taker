@@ -60,4 +60,5 @@ This will run the server. You can find the page on localhost:3001. To end your s
 ![Shot-2](images/notes.png)
 
 ### Credits
-Frontend starting files provided © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Starter code provided by the UCSD coding bootcamp
+All associated DOCS
