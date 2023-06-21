@@ -1,29 +1,28 @@
 // Dependency
 const express = require('express');
 
-// set application to use express
-const application = express();
+// set app to use express
+const app = express();
 
-// creates enviornment variable port
+// creates enviornment using port 3001
 const PORT = process.env.PORT || 3001;
 
 
 
 // creates routes ("/") for files in "public" folder
-application.use(express.static('public'));
+app.use(express.static('public'));
 // sets up express to handel data parser
-application.use(express.urlencoded({ extended: true}));
-application.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
 
 
 // route files
-require('./routes/apiRoutes')(application);
-require('./routes/htmlRoutes')(application);
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
 
 
 
 // application listener - starts the server at the 3001 port
-application.listen(PORT, () => {
-    console.log(`Server available at localhost${PORT}`);
+app.listen(PORT, () => { console.log(`Server available at localhost${PORT}`);
 });
